@@ -1,3 +1,9 @@
-from django.shortcuts import render
+from rest_framework.viewsets import ModelViewSet
+from rest_framework.permissions import IsAuthenticated, IsAdminOrReadOnly
+from .models import Attendance
+from .serializers import AttendanceSerializer
 
-# Create your views here.
+class AttendanceViewSet(ModelViewSet):
+    permission_classes = [IsAuthenticated, IsAdminOrReadOnly]
+    queryset = Attendance.objects.all()
+    serializer_class = AttendanceSerializer
