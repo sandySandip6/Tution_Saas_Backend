@@ -7,10 +7,9 @@ class StudentAdmin(admin.ModelAdmin):
         'student_code',
         'first_name',
         'last_name',
-        'grade',
         'status',
         'guardian_phone',
     )
 
-    list_filter = ('status', 'grade')
+    list_filter = ['status']
     search_fields = ('student_code', 'first_name', 'last_name', 'guardian_phone')
