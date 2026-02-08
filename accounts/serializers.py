@@ -18,7 +18,3 @@ class CustomUserSerializer(serializers.ModelSerializer):
                 password=validated_data['password']
         )
         return user
-            
-            
-        
-    
