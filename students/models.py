@@ -16,7 +16,7 @@ class Student(models.Model):
     gender = models.CharField(max_length=10, choices=GENDER_CHOICES)
     date_of_birth = models.DateField()
 
-    student_code = models.CharField(max_length=20, unique=True, write_only=True)
+    student_code = models.CharField(max_length=20, unique=True)
 
     
     STUDENT_STATUS = [

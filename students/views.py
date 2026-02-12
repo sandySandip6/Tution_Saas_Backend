@@ -1,5 +1,6 @@
 from rest_framework.viewsets import ModelViewSet
-from rest_framework.permissions import IsAuthenticated, IsAdminOrReadOnly
+from rest_framework.permissions import IsAuthenticated
+from .permission import IsAdminOrReadOnly
 from .models import Student
 from .serializers import StudentSerializer
 
